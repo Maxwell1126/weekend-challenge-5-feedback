@@ -10,7 +10,21 @@ class App extends Component {
       <div>
         <Router>
           <div>
+            <p>
+              <Link to="/feelings">feelings |</Link>
+              <Link to="/understanding"> understanding |</Link>
+              <Link to="/supported"> supported |</Link>
+              <Link to="/comments"> comments |</Link>
+              <Link to="/review"> review |</Link>
+              <Link to="/thanks"> thanks |</Link>
+            </p>
+
             <Route path='/' component={Header} />
+            {/* <Route exact path='/understanding' component={Header} />
+            <Route exact path='/supported' component={Header} />
+            <Route exact path='/comments' component={Header} />
+            <Route exact path='/review' component={Header} />
+            <Route exact path='/thanks' component={Header} /> */}
           </div>
         </Router>
       </div>
