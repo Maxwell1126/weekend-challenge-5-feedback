@@ -10,6 +10,11 @@ class Feelings extends Component {
     }
 
     handleNextButton = (event) => {
+        const action = { type: 'SET_FEELINGS', payload: this.state.input };
+        this.props.dispatch(action);
+        this.setState({
+            input: '',
+        })
         this.props.history.push('/');
     }
 
@@ -24,8 +29,9 @@ class Feelings extends Component {
             <div>
             <Header />
             <h1>How Are You Feeling Today?</h1>
-            <input type="int" placeholder="1-5, 5 is best" 
+            <input type="number" placeholder="1-5, 5 is best"
                 OnChange={this.updateFeelings}/>
+            <button onClick={this.handleNextButton}>Next</button>
             </div>
             )
     }
