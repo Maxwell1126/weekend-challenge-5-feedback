@@ -7,6 +7,7 @@ import Summary from '../Summary/Summary.js';
 import Feelings from '../Feelings/Feelings.js';
 import Understanding from '../Understanding/Understanding.js';
 import Support from '../Support/Support.js';
+import Comments from '../Comments/Comments.js';
 class App extends Component {
   render() {
     return (
@@ -26,10 +27,8 @@ class App extends Component {
             <Route exact path='/' component={Feelings} />
             <Route exact path='/understanding' component={Understanding} />
             <Route exact path='/support' component={Support} />
-            {/* <Route exact path='/understanding' component={Header} />
-            <Route exact path='/supported' component={Header} />
-            <Route exact path='/comments' component={Header} />
-            <Route exact path='/review' component={Header} />
+            <Route exact path='/comments' component={Comments} />
+            {/* <Route exact path='/review' component={Header} />
             <Route exact path='/thanks' component={Header} /> */}
           </div>
         </Router>

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-class Understanding extends Component {
+class Comments extends Component {
     constructor() {
         super();
         this.state = {
@@ -9,15 +9,15 @@ class Understanding extends Component {
     }
 
     handleNextButton = (event) => {
-        const action = { type: 'SET_SUPPORT', payload: this.state.input };
+        const action = { type: 'SET_COMMENTS', payload: this.state.input };
         this.props.dispatch(action);
         this.setState({
             input: '',
         })
-        this.props.history.push('/comments');
+        this.props.history.push('/');
     }
 
-    updateSupport = (event) => {
+    updateComments = (event) => {
         this.setState({
             input: event.target.value,
         })
@@ -27,8 +27,8 @@ class Understanding extends Component {
         return (
             <div>
                 <h1>How well are you being supported?</h1>
-                <input type="number" placeholder="1-5, 5 is best"
-                    onChange={this.updateSupport} />
+                <input type="text" placeholder="Make any comments here."
+                    onChange={this.updateComments} />
                 <button onClick={this.handleNextButton}>Next</button>
 
             </div>
@@ -39,4 +39,4 @@ class Understanding extends Component {
 const mapReduxStoreToProps = (reduxStore) => ({
     reduxStore: reduxStore
 });
-export default connect(mapReduxStoreToProps)(Understanding);
+export default connect(mapReduxStoreToProps)(Comments);
