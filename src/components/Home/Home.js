@@ -5,6 +5,7 @@ import Card from '@material-ui/core/Card';
 import Button from '@material-ui/core/Button';
 class Home extends Component {
 
+    // On the click event, we move the user to the feelings page.
     handleNextButton = (event) => {
         this.props.history.push('/summary/feelings');
     }

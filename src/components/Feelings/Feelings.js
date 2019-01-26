@@ -15,9 +15,10 @@ class Feelings extends Component {
         }
     }
 
+    // On the click event, we will dispatch the previously mutated state,
+    // and then reset the state to an empty string.
+    // Last, we move the user to the understanding page.
     handleNextButton = (event) => {
-        console.log('input', this.state.input);
-
         const action = { type: 'SET_FEELINGS', payload: this.state.input };
         this.props.dispatch(action);
         this.setState({
@@ -27,8 +28,6 @@ class Feelings extends Component {
     }
 
     updateFeelings = (event) => {
-        console.log('update feelings');
-
         this.setState({
             input: event.target.value,
         })

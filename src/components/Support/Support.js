@@ -15,6 +15,9 @@ class Understanding extends Component {
         }
     }
 
+    // On the click event, we will dispatch the previously mutated state,
+    // and then reset the state to an empty string.
+    // Last, we move the user to the comments page.
     handleNextButton = (event) => {
         const action = { type: 'SET_SUPPORT', payload: this.state.input };
         this.props.dispatch(action);

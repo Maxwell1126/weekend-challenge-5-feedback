@@ -1,3 +1,4 @@
+//We import all the components we want to make routes for
 import React, { Component } from 'react';
 import { HashRouter as Router, Route, } from 'react-router-dom';
 import './App.css';
@@ -17,6 +18,8 @@ class App extends Component {
         <Header />
         <Router>
           <div>
+            {/* The summary route is not an exact path so that it can 
+            be seen on any other page that puts /summary in its route. */}
             <Route exact path='/' component={Home} />
             <Route exact path='/summary/feelings' component={Feelings} />
             <Route exact path='/summary/understanding' component={Understanding} />

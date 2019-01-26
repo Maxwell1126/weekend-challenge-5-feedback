@@ -7,6 +7,8 @@ import Button from '@material-ui/core/Button';
 
 class Summary extends Component {
 
+    // On the click event, we will post all the reduxstore data,
+    // in the feedback object, to the server to be added to the database.
     handleSubmit = () => {
         let feedback = {
             feelings: this.props.reduxStore.feelings,
@@ -14,20 +16,21 @@ class Summary extends Component {
             support: this.props.reduxStore.support,
             comments: this.props.reduxStore.comments
         }
-        console.log(feedback);
-
         axios({
             method: 'POST',
             url: '/feedback',
             data: feedback,
         }).then((response) => {
-            console.log(response);
+            // Last, we move the user to the thanks page.
             this.props.history.push('/thanks');
         }).catch((error) => {
+            //We catch errors if they occur.
             const errorMessage = `Server error: ${error}`;
             alert(errorMessage);
             console.log(errorMessage);
         });
+        // We then set and dispatch the reduxstore data 
+        // back to zeroes and an empty string, depending.
         const actionf = { type: 'SET_FEELINGS', payload: 0 };
         this.props.dispatch(actionf);
         const actionu = { type: 'SET_UNDERSTANDING', payload: 0 };

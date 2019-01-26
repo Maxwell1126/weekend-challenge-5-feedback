@@ -8,13 +8,16 @@ import Button from '@material-ui/core/Button';
 import CardContent from '@material-ui/core/CardContent';
 
 class Comments extends Component {
+    //state is an empty string to start
     constructor() {
         super();
         this.state = {
             input: '',
         }
     }
-
+    // On the click event, we will dispatch the previously mutated state,
+    // and then reset the state to an empty string.
+    // Last, we move the user to the summary page.
     handleNextButton = (event) => {
         const action = { type: 'SET_COMMENTS', payload: this.state.input };
         this.props.dispatch(action);
