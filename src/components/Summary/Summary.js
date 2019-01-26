@@ -42,7 +42,8 @@ class Summary extends Component {
     }
 
     render() {
-
+        //conditionally rendering wether the button on this component is disabled
+        //and if the button text reads 'incomplete' or 'submit'.
         let status = '';
         let buttonText = '';
         if (this.props.reduxStore.feelings === 0 ||
@@ -56,7 +57,9 @@ class Summary extends Component {
             buttonText = "Submit"
             status = false;
         }
-
+        //Renders a card that is styled in app.css.
+        //Displays the information from the reduxstore.
+        //The card contains the button with this components click event.
         return (
             <div className="container">
                 <Card raised="true" className="card">

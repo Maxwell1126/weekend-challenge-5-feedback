@@ -9,7 +9,8 @@ class Home extends Component {
     handleNextButton = (event) => {
         this.props.history.push('/summary/feelings');
     }
-
+    //Renders a card that is styled in app.css.
+    //The card contains the button with this components click event.
     render() {
         return (
             <div className="container">

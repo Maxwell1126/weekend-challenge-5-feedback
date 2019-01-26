@@ -6,11 +6,12 @@ import Button from '@material-ui/core/Button';
 
 class Thanks extends Component {
 
-        // On the click event, we move the user to the home page.
+    // On the click event, we move the user to the home page.
     handleNextButton = (event) => {
         this.props.history.push('/');
     }
-
+    //Renders a card that is styled in app.css.
+    //The card contains the button with this components click event.
     render() {
         return (
             <div className="container">

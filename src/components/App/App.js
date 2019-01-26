@@ -12,6 +12,7 @@ import Summary from '../Summary/Summary.js';
 import Thanks from '../Thanks/Thanks.js';
 
 class App extends Component {
+  //Renders the header component and handles all the routes of the project.
   render() {
     return (
       <div>

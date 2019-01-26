@@ -32,7 +32,9 @@ class Comments extends Component {
             input: event.target.value,
         })
     }
-
+    //Renders a card that is styled in app.css.
+    //The card contains the button with this components click event
+    //and the input field that sets the local state.
     render() {
         return (
             <div className="container">
