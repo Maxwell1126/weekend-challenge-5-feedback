@@ -26,7 +26,7 @@ class Comments extends Component {
     render() {
         return (
             <div>
-                <h1>How well are you being supported?</h1>
+                <h1>Please make any additional comments</h1>
                 <input type="text" placeholder="Make any comments here."
                     onChange={this.updateComments} />
                 <button onClick={this.handleNextButton}>Next</button>

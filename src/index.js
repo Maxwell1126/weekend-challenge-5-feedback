@@ -27,7 +27,7 @@ const support = (state = 0, action) => {
     return state;
 }
 
-const comments = (state = 0, action) => {
+const comments = (state = '', action) => {
     if (action.type === 'SET_COMMENTS') {
         return action.payload;
     }

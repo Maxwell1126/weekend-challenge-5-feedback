@@ -25,15 +25,23 @@ class Summary extends Component {
             alert(errorMessage);
             console.log(errorMessage);
         });
+        const actionf = { type: 'SET_FEELINGS', payload: 0 };
+        this.props.dispatch(actionf);
+        const actionu = { type: 'SET_UNDERSTANDING', payload: 0 };
+        this.props.dispatch(actionu);
+        const actions = { type: 'SET_SUPPORT', payload: 0 };
+        this.props.dispatch(actions);
+        const actionc = { type: 'SET_COMMENTS', payload: '' };
+        this.props.dispatch(actionc);
     }
 
     render() {
 
         let status = '';
         let buttonText = '';
-        if (this.props.reduxStore.feelings === '' ||
-            this.props.reduxStore.understanding === '' ||
-            this.props.reduxStore.support === '' ||
+        if (this.props.reduxStore.feelings === 0 ||
+            this.props.reduxStore.understanding === 0 ||
+            this.props.reduxStore.support === 0 ||
             this.props.reduxStore.comments === ''){
                 buttonText = "Incomplete"
             status = true;
@@ -49,7 +57,7 @@ class Summary extends Component {
                 <p>Understanding: {this.props.reduxStore.understanding}</p>
                 <p>Support: {this.props.reduxStore.support}</p>
                 <p>Comments: {this.props.reduxStore.comments}</p>
-                <button id ="submit"type="submit" disabled={status}>{buttonText}</button>
+                <button type="submit" disabled={status}>{buttonText}</button>
             </form>
         )
     }
