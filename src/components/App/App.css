@@ -1,19 +1,26 @@
-.App {
-  text-align: center;
+.card{
+     width:700px;
+     text-align: center;
+     padding-bottom: 30px;
 }
-
-.App-header {
-  background-color: #033076;
-  min-height: 70px;
-  padding: 20px;
-  color: white;
+.flex-container {
+    width:700px;
+    align-content: center;
 }
-
-.App-title {
-  font-size: 1.5em;
+.content{
+    display: flex;
+    justify-content: space-evenly;
 }
-
-.App-intro {
-  font-size: large;
+.container{
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    
 }
-
+.head{
+    text-align: center;
+    background-color: navy;
+    color: white;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}

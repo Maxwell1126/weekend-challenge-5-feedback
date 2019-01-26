@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import axios from 'axios';
+import '../App/App.css';
+import Card from '@material-ui/core/Card';
+import Button from '@material-ui/core/Button';
 
 class Summary extends Component {
 
@@ -12,7 +15,7 @@ class Summary extends Component {
             comments: this.props.reduxStore.comments
         }
         console.log(feedback);
-        
+
         axios({
             method: 'POST',
             url: '/feedback',
@@ -42,23 +45,29 @@ class Summary extends Component {
         if (this.props.reduxStore.feelings === 0 ||
             this.props.reduxStore.understanding === 0 ||
             this.props.reduxStore.support === 0 ||
-            this.props.reduxStore.comments === ''){
-                buttonText = "Incomplete"
+            this.props.reduxStore.comments === '') {
+            buttonText = "Incomplete"
             status = true;
-                
-        }else{
+
+        } else {
             buttonText = "Submit"
             status = false;
         }
-        
+
         return (
-            <form onSubmit= {this.handleSubmit}>
-                <p>Feelings: {this.props.reduxStore.feelings}</p>
-                <p>Understanding: {this.props.reduxStore.understanding}</p>
-                <p>Support: {this.props.reduxStore.support}</p>
-                <p>Comments: {this.props.reduxStore.comments}</p>
-                <button type="submit" disabled={status}>{buttonText}</button>
-            </form>
+            <div className="container">
+                <Card raised="true" className="card">
+                    <form onSubmit={this.handleSubmit}>
+                        <h1>Review your feedback</h1>
+                        <p>Feelings: {this.props.reduxStore.feelings}</p>
+                        <p>Understanding: {this.props.reduxStore.understanding}</p>
+                        <p>Support: {this.props.reduxStore.support}</p>
+                        <p>Comments: {this.props.reduxStore.comments}</p>
+                        <Button size="large" variant="contained"
+                            type="submit" disabled={status}>{buttonText}</Button>
+                    </form>
+                </Card>
+            </div>
         )
     }
 }

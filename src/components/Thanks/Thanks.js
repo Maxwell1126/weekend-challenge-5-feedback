@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import '../App/App.css';
+import Card from '@material-ui/core/Card';
+import Button from '@material-ui/core/Button';
+
 class Thanks extends Component {
 
     handleNextButton = (event) => {
@@ -8,9 +12,12 @@ class Thanks extends Component {
 
     render() {
         return (
-            <div>
-                <h1>Thank you!</h1>
-                <button onClick={this.handleNextButton}>Home</button>
+            <div className="container">
+                <Card className="card">
+                    <h1>Thank you!</h1>
+                    <Button variant="contained" color="primary" size="large"
+                        onClick={this.handleNextButton}>Home</Button>
+                </Card>
             </div>
         )
     }

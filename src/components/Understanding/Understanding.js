@@ -1,5 +1,11 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import '../App/App.css'
+import Card from '@material-ui/core/Card';
+import MenuItem from '@material-ui/core/MenuItem';
+import TextField from '@material-ui/core/TextField';
+import Button from '@material-ui/core/Button';
+import CardContent from '@material-ui/core/CardContent';
 class Understanding extends Component {
     constructor() {
         super();
@@ -25,12 +31,15 @@ class Understanding extends Component {
 
     render() {
         return (
-            <div>
-                <h1>How well are you understanding the content?</h1>
-                <input type="number" placeholder="1-5, 5 is best"
-                    onChange={this.updateUnderstanding} />
-                <button onClick={this.handleNextButton}>Next</button>
-                
+            <div className="container">
+                <Card raised="true" className="card">
+                    <h1>How well are you understanding the content?</h1>
+                    <CardContent className="content">
+                        <TextField variant="outlined" type="number" placeholder="1-5, 5 is best"
+                            onChange={this.updateUnderstanding} />
+                        <Button size="large" variant="contained" onClick={this.handleNextButton}>Next</Button>
+                    </CardContent>
+                </Card>
             </div>
         )
     }
