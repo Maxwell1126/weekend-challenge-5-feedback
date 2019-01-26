@@ -1,83 +1,82 @@
 # Redux Feedback Loop
 
-> **PLEASE COMMENT YOUR CODE.** Do not clone this repository. Instead, download the zip, extract the contents, `git init`, `git add .`, `git commit -m "initial commit - base project"` and add your remote. Please do this before you leave for the day.
+## Prerequisites/Software Used
 
-"And my last reminder of the day, which is my last reminder of every day, is...?" - Luke
-
-
- For this assignment, you will be creating a feedback form modeled after Prime's system. Feedback will be collected over 4 views, and when all steps are complete, your app will save the feedback in the database. In a separate part of the page, display the current feedback values and a submit button. 
-
-### SETUP
-
-Create your database and tables using the provided `data.sql` file. Start the server.
-
-```
-npm install
-npm run server
-```
-
-Now that the server is running, open a new terminal tab with `cmd + t` and start the react client app.
-
-```
-npm run client
-```
-
-### ADD NEW FEEDBACK
-
-> NOTE: As a baseline requirement, you must use Redux to store your data across views.
-
-Create a multi-part form that allows users to leave feedback for today. 
-There will be 4 views for the form parts.
-The parts:
-- How are you feeling today?
-![feeling](wireframes/feeling.png)
-- How well are you understanding the content?
-![understanding](wireframes/understanding.png)
-- How well are you being supported?
-![support](wireframes/supported.png)
-- Any comments you want to leave?
-![comments](wireframes/comments.png)
-
-While there is no nav bar, each part of the form should be at its own route. Clicking next should move the user to the appropriate step in the process as well as update the `Review` Component.
+- Node.js
+- Postico
+- Terminal
+- React
+- Redux
 
 
-## THE REVIEW COMPONENT
+## Installing
 
-In addition to the multi-step form, the app needs to display the results of each step clearly and at all times. HITN: This will be your current redux values displayed on the DOM. 
-
-The simplest way could be another component on the DOM which shows the results of the current survey and a Submit button.
-
-### Incomplete, Submit button is disabled:
-
-![comments](wireframes/comments.png)
-
-### Survey complete, Submit button is active:
-
-![comments](wireframes/review.png)
-
-## SUBMIT THE FEEDBACK
-
-The `Review` portion needs a submit button which will be clicked on to actually submit the completed feedback to the server. **This submit button should only be active when all of the survey steps are complete.**
-
-When the submit button is clicked, save the submission in the database. The user should see a submission success page.
-
-![understanding](wireframes/page-five.png)
+- Download project
+- `npm install`
+- `createdb prime_feedback`
+- `npm run server`
+- `npm run client`
 
 
+## Screen Shots
 
-## STRETCH GOALS
+### 1 Home Page
+![Home page screen shot](wireframes/Home_Page.png)
 
-> NOTE: These stretch goals are intended to be completed in order.
+### 2 Feelings Page
+![Home page screen shot](wireframes/Feelings_Page.png)
 
-### ADMIN SECTION
+### 3 Understanding Page
+![Home page screen shot](wireframes/Understanding_Page.png)
 
-Display all of the existing feedback at the route `/admin`. The most recently added feedback should appear at the top of the list. Allow the user to delete existing feedback. Prompt the user to confirm prior to deleting the feedback from the database.
+### 4 Support Page
+![Home page screen shot](wireframes/Support_Page.png)
 
-![display feedback](wireframes/admin.png)
+### 5 Comments Page
+![Home page screen shot](wireframes/Comments_Page.png)
 
-### OTHER FEATURES
+### 6 Summary Page
+![Home page screen shot](wireframes/Summary_Page.png)
 
-- Update this README.md to describe the project in your own words
-- Improve the styling of the app using Material-UI theme, cards, snackbars, buttons, nav bar, and icons, and anything else you'd like.
-- Add the ability to flag an existing feedback entry for further review on the /admin view
-- Deploy your project to Heroku -- you'll need to read the special instructions for building and deploying with these apps! 
+### 7 Thanks Page
+![Home page screen shot](wireframes/Thanks_Page.png)
+
+
+## Documentation
+
+- [Link to orginal assignment:](https://github.com/PrimeAcademy/weekend-challenge-5-feedback)
+
+
+## Completed Features
+
+- Routing that moves the app in the proper direction.
+- Buttons on each page that move the app to the next page.
+- Input fields on certain pages whose contents are stored via redux.
+- Summary of the information currently in Redux displayed on certain pages.
+- The summary included on certain pages also contains a conditionally rendered button.
+The button does is disabled until all fields have been filled.
+- A page at the end of the program displays the summary and allows the user to submit
+the feedback to the database.
+- The last page thanks the user and sends them to the home page when they click the  button on the page.
+
+
+## Future Features
+
+- Add a nav bar to navigate between pages easier.
+- Validation for the input information.
+- Improve upon the styling of the project(add icons, etc.).
+- Add an Admin page to flag an existing entry for review.
+- Deployment to Heroku.
+
+## Deployment
+
+- Plans to deploy to Heroku.
+
+## Author
+
+- Maxwell Todd
+
+
+## Acknowledgements
+- I would like to thank Chris Black, Luke Schlangen, Kris Szfranski, and Dane aka DoctorHowser for the base assignment code.
+- I would additionally like to thank my cohort mates at Prime for supporting me.
