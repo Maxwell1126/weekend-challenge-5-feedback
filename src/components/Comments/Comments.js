@@ -14,7 +14,7 @@ class Comments extends Component {
         this.setState({
             input: '',
         })
-        this.props.history.push('/');
+        this.props.history.push('/review');
     }
 
     updateComments = (event) => {
