@@ -8,6 +8,7 @@ import Button from '@material-ui/core/Button';
 import CardContent from '@material-ui/core/CardContent';
 
 class Understanding extends Component {
+    //state is an empty string to start
     constructor() {
         super();
         this.state = {
@@ -27,11 +28,13 @@ class Understanding extends Component {
         this.props.history.push('/summary/comments');
     }
 
+    //Sets the local state to whatever is entered in the input field.
     updateSupport = (event) => {
         this.setState({
             input: event.target.value,
         })
     }
+    
     //Renders a card that is styled in app.css.
     //The card contains the button with this components click event
     //and the input field that sets the local state.

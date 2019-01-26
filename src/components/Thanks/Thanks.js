@@ -10,6 +10,7 @@ class Thanks extends Component {
     handleNextButton = (event) => {
         this.props.history.push('/');
     }
+    
     //Renders a card that is styled in app.css.
     //The card contains the button with this components click event.
     render() {
