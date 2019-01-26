@@ -9,15 +9,15 @@ class Understanding extends Component {
     }
 
     handleNextButton = (event) => {
-        const action = { type: 'SET_UNDERSTANDING', payload: this.state.input };
+        const action = { type: 'SET_SUPPORT', payload: this.state.input };
         this.props.dispatch(action);
         this.setState({
             input: '',
         })
-        this.props.history.push('/support');
+        this.props.history.push('/');
     }
 
-    updateUnderstanding = (event) => {
+    updateSupport = (event) => {
         this.setState({
             input: event.target.value,
         })
@@ -26,11 +26,11 @@ class Understanding extends Component {
     render() {
         return (
             <div>
-                <h1>How well are you understanding the content?</h1>
+                <h1>How well are you being supported?</h1>
                 <input type="number" placeholder="1-5, 5 is best"
-                    onChange={this.updateUnderstanding} />
+                    onChange={this.updateSupport} />
                 <button onClick={this.handleNextButton}>Next</button>
-                
+
             </div>
         )
     }

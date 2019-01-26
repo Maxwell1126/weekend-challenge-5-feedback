@@ -6,6 +6,7 @@ import Header from '../Header/Header.js';
 import Summary from '../Summary/Summary.js';
 import Feelings from '../Feelings/Feelings.js';
 import Understanding from '../Understanding/Understanding.js';
+import Support from '../Support/Support.js';
 class App extends Component {
   render() {
     return (
@@ -16,7 +17,7 @@ class App extends Component {
             <p>
               <Link to="/">feelings |</Link>
               <Link to="/understanding"> understanding |</Link>
-              <Link to="/supported"> supported |</Link>
+              <Link to="/support"> support |</Link>
               <Link to="/comments"> comments |</Link>
               <Link to="/review"> review |</Link>
               <Link to="/thanks"> thanks |</Link>
@@ -24,6 +25,7 @@ class App extends Component {
 
             <Route exact path='/' component={Feelings} />
             <Route exact path='/understanding' component={Understanding} />
+            <Route exact path='/support' component={Support} />
             {/* <Route exact path='/understanding' component={Header} />
             <Route exact path='/supported' component={Header} />
             <Route exact path='/comments' component={Header} />

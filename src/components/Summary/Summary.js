@@ -7,6 +7,9 @@ class Summary extends Component {
         return (
             <div>
                 <p>Feelings: {this.props.reduxStore.feelings}</p>
+                <p>Understanding: {this.props.reduxStore.understanding}</p>
+                <p>Support: {this.props.reduxStore.support}</p>
+                <p>Comments: {this.props.reduxStore.feelings}</p>
             </div>
         )
     }
