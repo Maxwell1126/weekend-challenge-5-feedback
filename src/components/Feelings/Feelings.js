@@ -17,7 +17,7 @@ class Feelings extends Component {
         this.setState({
             input: '',
         })
-        this.props.history.push('/understanding');
+        this.props.history.push('/summary/understanding');
     }
 
     updateFeelings = (event) => {

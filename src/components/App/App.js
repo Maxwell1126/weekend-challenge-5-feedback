@@ -17,26 +17,16 @@ class App extends Component {
         <Router>
           <div>
 
-            <p>
-              <Link to="/">feelings |</Link>
-              <Link to="/understanding"> understanding |</Link>
-              <Link to="/support"> support |</Link>
-              <Link to="/comments"> comments |</Link>
-              <Link to="/thanks"> thanks |</Link>
-            </p>
-
             <Route exact path='/' component={Feelings} />
-            <Route exact path='/understanding' component={Understanding} />
-            <Route exact path='/support' component={Support} />
-            <Route exact path='/comments' component={Comments} />
-            <Route exact path='/review' component={Review} />
+            <Route exact path='/summary/understanding' component={Understanding} />
+            <Route exact path='/summary/support' component={Support} />
+            <Route exact path='/summary/comments' component={Comments} />
+            <Route exact path='/summary/review' component={Review} />
             <Route exact path='/thanks' component={Thanks} />
-            <Route exact path='/summary' component={Summary} />
-
+            <Route path = '/' component={Summary} />
             
           </div>
         </Router>
-        <Summary />
       </div>
     );
   }

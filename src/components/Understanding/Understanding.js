@@ -14,7 +14,7 @@ class Understanding extends Component {
         this.setState({
             input: '',
         })
-        this.props.history.push('/support');
+        this.props.history.push('/summary/support');
     }
 
     updateUnderstanding = (event) => {
