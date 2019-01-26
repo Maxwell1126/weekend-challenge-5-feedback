@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import { HashRouter as Router, Route, Link } from 'react-router-dom';
 import axios from 'axios';
 import './App.css';
-import Header from '../Header/Header.js';
-
+import Feelings from '../Feelings/Feelings.js';
 class App extends Component {
   render() {
     return (
@@ -19,7 +18,8 @@ class App extends Component {
               <Link to="/thanks"> thanks |</Link>
             </p>
 
-            <Route path='/' component={Header} />
+            <Route path='/' component={Feelings} />
+            {/* <Route exact path='/feelings' component={Feelings} /> */}
             {/* <Route exact path='/understanding' component={Header} />
             <Route exact path='/supported' component={Header} />
             <Route exact path='/comments' component={Header} />
