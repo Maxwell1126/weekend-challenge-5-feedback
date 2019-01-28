@@ -16,6 +16,8 @@ const feelings = (state = 0, action) => {
     return state;
 }
 
+
+
 //This reducer keeps the value we assign on the understanding page to be used
 //in the project whenever its called. We later reset it back to zero when we 
 //submit to the database.
