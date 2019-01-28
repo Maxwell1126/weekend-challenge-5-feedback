@@ -22,6 +22,16 @@ class Summary extends Component {
             data: feedback,
         }).then((response) => {
             // Last, we move the user to the thanks page.
+            // We then set and dispatch the reduxstore data 
+            // back to zeroes and an empty string, depending.
+            const actionf = { type: 'SET_FEELINGS', payload: 0 };
+            this.props.dispatch(actionf);
+            const actionu = { type: 'SET_UNDERSTANDING', payload: 0 };
+            this.props.dispatch(actionu);
+            const actions = { type: 'SET_SUPPORT', payload: 0 };
+            this.props.dispatch(actions);
+            const actionc = { type: 'SET_COMMENTS', payload: '' };
+            this.props.dispatch(actionc);
             this.props.history.push('/thanks');
         }).catch((error) => {
             //We catch errors if they occur.
@@ -29,16 +39,7 @@ class Summary extends Component {
             alert(errorMessage);
             console.log(errorMessage);
         });
-        // We then set and dispatch the reduxstore data 
-        // back to zeroes and an empty string, depending.
-        const actionf = { type: 'SET_FEELINGS', payload: 0 };
-        this.props.dispatch(actionf);
-        const actionu = { type: 'SET_UNDERSTANDING', payload: 0 };
-        this.props.dispatch(actionu);
-        const actions = { type: 'SET_SUPPORT', payload: 0 };
-        this.props.dispatch(actions);
-        const actionc = { type: 'SET_COMMENTS', payload: '' };
-        this.props.dispatch(actionc);
+        
     }
 
     render() {
