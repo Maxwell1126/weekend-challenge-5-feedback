@@ -1,15 +1,6 @@
 const express = require('express');
 const feedbackRouter = express.Router();
-const pg = require('pg');
-const Pool = pg.Pool;
-const pool = new Pool({
-    //The database name neccessary for the project.
-    database: 'prime_feedback',
-    host: 'localhost',
-    port: 5432,
-    max: 10,
-    idleTimeoutMillis: 10000
-});
+var pool = require('../modules/pool.js');
 
 //This post statement will use a database query to insert the feedback object
 //into the database.
