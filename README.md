@@ -70,7 +70,7 @@ the feedback to the database.
 
 ## Deployment
 
-- Plans to deploy to Heroku.
+- https://prime-feedback-app.herokuapp.com/#/
 
 ## Author
 
