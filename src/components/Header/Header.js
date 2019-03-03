@@ -3,10 +3,14 @@ import { connect } from 'react-redux';
 import '../App/App.css';
 
 class Header extends Component {
+
+    goHome = () =>{
+        this.history.push('/')
+    }
     render() {
         return (
             <header className="head">
-                <h1 >Feedback</h1>
+                <h1>Feedback</h1>
             </header>
         )
     }
